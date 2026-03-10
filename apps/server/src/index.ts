@@ -1,17 +1,9 @@
-// App entry point
-// - Create Hono app instance
-// - GET /health → { status: "ok", timestamp: ... }
-// - WebSocket upgrade route at /ws using upgradeWebSocket from "hono/bun"
-// - Port from Bun.env.PORT || 3000
-// - Export { port, fetch: app.fetch, websocket } for Bun.serve()
-
 import { Hono } from "hono";
 import { upgradeWebSocket, websocket } from "hono/bun";
-import { env } from "./env";
 
 const app = new Hono();
 
-const port = env.PORT || 3000;
+const port = Bun.env.PORT || 3000;
 
 // Health check
 app.get("/health", (c) => {
