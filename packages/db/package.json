@@ -1,0 +1,16 @@
+{
+	"name": "@farscry/db",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"license": "AGPL-3.0-only",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"dependencies": {
+		"drizzle-orm": "^0.45.1"
+	},
+	"devDependencies": {
+		"drizzle-kit": "^0.31.9"
+	}
+}

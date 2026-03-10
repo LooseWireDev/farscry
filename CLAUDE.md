@@ -24,7 +24,7 @@
 
 | Layer | Technology | Version |
 |-------|-----------|---------|
-| Mobile | React Native (Expo) with development builds | Expo SDK 54+ |
+| Mobile | React Native (Expo) with development builds | Expo SDK 55+ |
 | Server | Hono on Node.js | Latest |
 | Database | SQLite via Drizzle ORM (`bun:sqlite`) | Latest |
 | Auth | Better Auth (email/password) | Latest |

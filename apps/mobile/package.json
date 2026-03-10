@@ -1,0 +1,25 @@
+{
+	"name": "@farscry/mobile",
+	"version": "0.0.1",
+	"private": true,
+	"license": "AGPL-3.0-only",
+	"main": "expo-router/entry",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios"
+	},
+	"dependencies": {
+		"@farscry/shared": "workspace:*",
+		"expo": "^55.0.5",
+		"expo-router": "^55.0.4",
+		"expo-secure-store": "^55.0.8",
+		"react": "^19.2.4",
+		"react-native": "^0.84.1",
+		"react-native-webrtc": "^124.0.7"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.14",
+		"typescript": "^5.9.3"
+	}
+}
