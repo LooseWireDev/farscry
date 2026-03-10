@@ -130,7 +130,7 @@ Most calls connect directly between devices using STUN (which Farscry includes b
 ```
 ┌──────────┐         ┌──────────────┐         ┌──────────┐
 │  Phone A │◄───────►│ Farscry      │◄───────►│  Phone B │
-│          │  signal  │ Server       │  signal  │          │
+│          │  signal │ Server       │  signal │          │
 └────┬─────┘         │              │         └─────┬────┘
      │               │ • Auth       │               │
      │               │ • Contacts   │               │
