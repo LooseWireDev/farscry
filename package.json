@@ -1,0 +1,17 @@
+{
+  "name": "farscry",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
