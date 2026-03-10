@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/assets/farscry-logo.svg" alt="Farscry" width="80" />
+  <img src=".github/assets/farscry-icon.svg" alt="Farscry" width="80" />
 </p>
 
 <h1 align="center">Farscry</h1>
