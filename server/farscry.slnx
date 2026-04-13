@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Farscry.Api/Farscry.Api.csproj" />
+  <Project Path="Farscry.Proxy/Farscry.Proxy.csproj" />
+</Solution>

@@ -1,0 +1,6 @@
+@Farscry.Api_HostAddress = http://localhost:5263
+
+GET {{Farscry.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

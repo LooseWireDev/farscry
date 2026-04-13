@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: farscry
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  api-a:
+    build: ./Farscry.Api
+    environment:
+      - ASPNETCORE_URLS=http://+:5001
+      - ConnectionStrings__DefaultConnection=Host=db;Database=farscry;Username=postgres;Password=${DB_PASSWORD}
+      - Redis__ConnectionString=redis:6379
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+      - redis
+
+  api-b:
+    build: ./Farscry.Api
+    environment:
+      - ASPNETCORE_URLS=http://+:5002
+      - ConnectionStrings__DefaultConnection=Host=db;Database=farscry;Username=postgres;Password=${DB_PASSWORD}
+      - Redis__ConnectionString=redis:6379
+    ports:
+      - "5002:5002"
+    depends_on:
+      - db
+      - redis
+
+  proxy:
+    build: ./Farscry.Proxy
+    ports:
+      - "5000:5000"
+    depends_on:
+      - api-a
+      - api-b
+
+volumes:
+  postgres_data:
